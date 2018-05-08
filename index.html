@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Table Finder</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Rubik:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>Table Finder</h1>
+    <p id="pick">Pick your table now</p>
+  </header>
+
+  <main>
+
+    <ul class="table-group">
+      <li class="table available">1<div class="tableInfo"></div></li>
+      <li class="table available">2</li>
+      <li class="table available">3</li>
+      <li class="table available">4</li>
+      <li class="table available">5</li>
+      <li class="table available">6</li>
+      <li class="table available">7</li>
+      <li class="table available">8</li>
+      <li class="table available">9</li>
+    </ul>
+    <form>
+      <i class="material-icons close-button">close</i>
+      <fieldset>
+
+      <h3>New Reservation</h3>
+      <p class="tableNum">Table Number: __</p>
+      <input type="text" class="inputs" id="name" placeholder="Name">
+      <input type="text" class="inputs" id="phone" placeholder="Phone">
+      <input type="text" class="inputs" id="party-size" placeholder="Party Size">
+      <button type="button" class="save-button inputs">SAVE</button>
+      </fieldset>
+    </form>
+
+  </main>
+  
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
