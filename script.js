@@ -15,7 +15,7 @@ $(document).ready(() => {
       // }, 5000);
 
       // add a class of "clicked" on what you clicked
-      $(e.target).toggleClass( "clicked");
+      $(e.target).toggleClass("clicked");
 
       // identify the table you clicked on and its number, store that in the variable "num"
       let num = $(e.target)[0].innerText;
@@ -49,21 +49,31 @@ $(document).ready(() => {
       $("form").fadeOut(250);
     })
 
-    if ($(e.target).hasClass("save-button")) {
+    $(".save-button").on("click", (e) => {
       $(".clicked").attr("name", $("#name").val());
+      $(".clicked").attr("phone", $("#phone").val());
       $(".clicked").attr("party", $("#party-size").val());
-      console.log($("#name").val());
-      console.log($("#party-size").val());
+      // console.log($("#name").val());
+      // console.log($("#party-size").val());
       $(".clicked").toggleClass( "available reserved clicked");
       $("form").fadeOut(250);
+    })
+    if ($(e.target).hasClass("save-button")) {
+     
     }
   });
 
  $(document).on("mouseenter", ".reserved", (e) => {
-    $(".tableInfo").append(`<p>Name: ${$(e.target).attr("name")}</p><p>Size of Party: ${$(e.target).attr("party")}</p>`);
-    $(".tableInfo").fadeIn(250);
-    $(".tableInfo").attr("style", "display: flex");
-    // $(".tableInfo").show();
+
+  let thisTable = $(e.target).contents();
+
+   $(".tableInfo").append(`<p>Name: ${$(e.target).attr("name")}</p><p>Size of Party: ${$(e.target).attr("party")}</p>`);
+    // $(".tableInfo").append(`<p>Name: ${$(e.target).attr("name")}</p><p>Size of Party: ${$(e.target).attr("party")}</p>`);
+
+   
+  thisTable.fadeIn(250);
+  thisTable.attr("style", "display: flex");
+  thisTable.show();
   });
 
   $(document).on("mouseleave", ".reserved", () => {
