@@ -63,17 +63,13 @@ $(document).ready(() => {
     }
   });
 
- $(document).on("mouseenter", ".reserved", (e) => {
+  $(document).on("mouseenter", ".reserved", (e) => {
 
-  let thisTable = $(e.target).contents();
-
-   $(".tableInfo").append(`<p>Name: ${$(e.target).attr("name")}</p><p>Size of Party: ${$(e.target).attr("party")}</p>`);
-    // $(".tableInfo").append(`<p>Name: ${$(e.target).attr("name")}</p><p>Size of Party: ${$(e.target).attr("party")}</p>`);
-
-   
-  thisTable.fadeIn(250);
-  thisTable.attr("style", "display: flex");
-  thisTable.show();
+    let thisTable = $(e.target).contents();
+    console.log(e.target);
+    
+    $(e.target).html(`${$(e.target).attr("table-number")}<div class="tableInfo"><p>Name: ${$(e.target).attr("name")}</p><p>Size of Party: ${$(e.target).attr("party")}</p></div>`)
+    .show();
   });
 
   $(document).on("mouseleave", ".reserved", () => {

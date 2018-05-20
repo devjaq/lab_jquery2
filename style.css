@@ -1,19 +1,18 @@
-html {
+/* html {
 
-}
+} */
 
 h1 {
-font-family: 'Rubik', sans-serif;
-margin: 0;
-padding: 0;
-color: #E34E45;
-font-weight: 700pt;
-}
-
-p {
   margin: 0;
   padding: 0;
-  text-align: center;
+  color: #E34E45;
+  font-family: 'Rubik', sans-serif;
+font-weight: 700;
+text-align: center; 
+}
+
+#pick {
+  text-align: center; 
 }
 
 body {
@@ -24,6 +23,11 @@ body {
   box-sizing: border-box;
   font-family: 'Roboto Mono', sans-serif;
   font-weight: normal;
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }
 
 main { 
@@ -70,7 +74,7 @@ li p {
 }
 
 .tableInfo {
-  display: none;
+  /* display: none; */
   flex-direction: column;
   align-items: flex-start;
   position: absolute;
